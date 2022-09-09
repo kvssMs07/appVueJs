@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
-import Article from '@/views/Home.vue';
+import Article from '@/views/Article.vue';
 
 const routes = [
     {
@@ -10,12 +10,16 @@ const routes = [
     },
     {
         name: 'Article',
-        path: '/article',
+        path: '/article/:id',
         component: Article,
-    }
+        props: true,
+    },
 ];
 
+// eslint-disable-next-line
 const router = createRouter({
     history: createWebHistory(),
     routes,
 })
+
+export default router;
