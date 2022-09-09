@@ -1,5 +1,5 @@
 <template>
-    <div class="list" v-for="(item, index ) in items">
+    <div class="list" v-for="(item, index ) in items" :key="index">
         <div class="ListeDisplay">
             <div class="cercle" v-text="item.title[0]" :key="index"></div>
             <h4 v-text="item.title" :key="index"></h4>

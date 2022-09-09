@@ -29,12 +29,12 @@
             }
         },
         mounted() {
-          axios.get('https://jsonplaceholder.typicode.com/posts/%27+this.id+%27/comments%27').then(response => {
-            this.comments = response.data
-          }),
-          axios.get('https://jsonplaceholder.typicode.com/posts/%27+this.id').then(response => {
-            this.article = response.data
-          })
+            axios.get('https://jsonplaceholder.typicode.com/posts/%27+this.id+%27/comments%27').then(response => {
+                this.comments = response.data
+            }),
+            axios.get('https://jsonplaceholder.typicode.com/posts/%27+this.id').then(response => {
+                this.article = response.data
+            })
         },
         methods: {
             hideItem(){
